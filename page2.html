@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Anime World</title>
+    <link rel="icon" href="img/logotip2.ico" type="images/x-icon">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr); 
+            grid-template-rows: 70px 1fr 55px; 
+            height: 100%;
+            position: relative; 
+            margin: 0;
+            padding: 0;
+            top:0;
+            left:0;
+            width: 100%;   
+        }
+
+        .header {
+            grid-column: 1 / span 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:row;
+            background-color: black;
+            color:#beaffc;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            font-size: 40px;
+            color: #FEFCFF;
+            text-shadow: 2px 2px #beaffc;
+            -webkit-text-stroke: 1px black;
+        }
+        /*moving*/
+        .mar {
+            position: absolute; 
+            top: -100%; 
+            transition: top 2s ease;
+            z-index: 3; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            width: 100%; 
+            padding: 10px;
+        }
+        .container:hover .mar {
+            top: 0;
+        }
+
+        .sidebar {
+            grid-column: 1 / span 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color:#1f1740;
+            font-weight: bold;
+            padding: 5px;
+            gap:10px;
+        }
+        .rectangle5 {
+            width: 300px;
+            height: 80px;         
+            background-color:#6752bd;   
+            position: relative;
+            border-radius: 10px;
+            border-bottom: 2px solid #beaffc;
+            transition: transform 0.3s;
+        }
+        .rectangle5:hover,
+        .rectangle5:focus {
+            transform: translateX(30px);
+        }
+        .rectangle5 a{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%); 
+            color: #beaffc;
+            text-shadow: 0px 2px 0 black;
+            text-decoration: none; 
+            text-align: center;
+        }
+        .rectangle5:hover a,
+        .rectangle5:focus a,
+        .rectangle5:active a,
+        .rectangle5:visited a {
+            color:whitesmoke; 
+        }
+
+        .content {
+            grid-column: 2 / span 1;
+            background-color:   #1f1740;/*#beaffc*/
+            color: #6752bd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding:0px;
+            margin: 0px;
+            
+        }
+        .center_page{
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 60px;
+            color: #FEFCFF;
+            text-shadow: 4px 4px #6752bd;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .content2 {
+            grid-column: 3  / span 1;
+            background-color: #1f1740;
+            padding: 10px;
+            /*img*/
+            background-image: url('img/logotip.png'); 
+            background-size: 400px 400px; 
+            background-position:right; 
+            background-repeat: no-repeat;
+        }
+
+        .footer {
+            grid-column: 1 / span 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:row;
+            background-color: black;
+            color:#beaffc;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        /*moving*/
+        .mar2 {
+            position: absolute; 
+            top: 100%; 
+            transition: top 2s ease;
+            z-index: 3; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            width: 100%; 
+            padding: 10px;
+        }
+        .mar2 h4,
+        .mar2 p {
+            margin: 0; 
+            padding: 0; 
+        }
+        .container:hover .mar2 {
+            top: 0;
+        }        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="mar">Welcome to Dreamy Anime World!</div>
+    </div>
+    <div class="sidebar">
+        <div class="rectangle5" tabindex="1">
+            <a href="main6.html">6+ (Семейные аниме)</a>
+        </div>
+        <div class="rectangle5" tabindex="2">
+            <a href="main12.html">12+ (Приключения и фэнтези)</a>
+        </div>
+        <div class="rectangle5" tabindex="3">
+            <a href="main14.html">14+ (Драма и романтика)</a>
+        </div>
+        <div class="rectangle5" tabindex="4">
+            <a href="main16.html">16+ (Экшн и триллер)</a>
+        </div>
+        <div class="rectangle5" tabindex="5">
+            <a href="main18.html">18+ (Семейные и психологические драмы)</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="center_page">Выберите жанр</div>
+        <p style="-webkit-text-stroke: 1px black; font-size:25px;font-weight: bold; font-family:'COMIC SANS MS', sans-serif;">Сотни аниме уже ждут вас</p>
+    </div>
+    <div class="content2"></div>
+    <div class="footer">
+        <div class="mar2">
+            <h4>Created by Dizarizago</h4>
+            <p>&copy; All rights reserved Dizarizago/mizioooz 2023-2024</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

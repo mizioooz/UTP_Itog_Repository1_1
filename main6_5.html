@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Anime World - 6+</title>
+    <link rel="icon" href="img/logotip2.ico" type="images/x-icon">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr); 
+            grid-template-rows: 90px 1fr 1fr 55px; 
+            height: 100%;
+            position: relative; 
+            margin: 0;
+            padding: 0;
+            top:0;
+            left:0;
+            width: 100%;   
+        }
+
+        .header {
+            grid-column: 1 / span 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:row;
+            background-color: black;
+            color:#beaffc;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            color: #FEFCFF;
+            text-shadow: 2px 2px #beaffc;
+            -webkit-text-stroke: 1px black;
+        }
+        /*moving*/
+        .mar {
+            position: absolute; 
+            top: -100%; 
+            transition: top 2s ease;
+            z-index: 3; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            width: 100%; 
+            padding: 10px;
+        }
+        .container:hover .mar {
+            top: 0;
+        }
+
+        .sidebar {
+            grid-column: 1 / span 3;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color:#1f1740;
+            font-weight: bold;
+            padding: 20px;
+            gap: 20px;
+        }
+        .rectangle5 {
+            width: 200px;
+            height: 300px;         
+            background-color:#6752bd;   
+            position: relative;
+            border-radius: 30px;
+            border-bottom: 2px solid #beaffc;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .rectangle5 span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%); 
+            color: #beaffc;
+            text-shadow: 0px 2px 0 black;
+            text-decoration: none; 
+            text-align: center;
+        }
+        .rectangle5:hover span,
+        .rectangle5:focus span,
+        .rectangle5:active span {
+            color:whitesmoke; 
+        }
+        .rectangle5 img {
+            max-width: 100%;
+            height: auto;   
+            margin-bottom: 10px;
+        }
+
+        .rectangle6 {
+            width: 800px;
+            height: 300px;         
+            background-color:#6752bd;   
+            position: relative;
+            border-radius: 30px;
+            border-bottom: 2px solid #beaffc;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 10px;
+            gap:10px;
+        }
+        .rectangle6 span{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%); 
+            color: #beaffc;
+            text-shadow: 0px 2px 0 black;
+            text-decoration: none; 
+            text-align: center;
+        }
+        .rectangle6:hover span,
+        .rectangle6:focus span,
+        .rectangle6:active span {
+            color:whitesmoke; 
+        }
+        .Main_header{
+            font-family: 'Arial', sans-serif;
+            font-size: 32px;
+            color: #FEFCFF;
+            text-shadow: 2px 2px #ac9ee5;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .sidebar2 {
+            grid-column: 1 / span 3;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color:#1f1740;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .rectangle1 {
+            width: 300px;
+            height: 30px;         
+            background-color:#6752bd;   
+            position: relative;
+            border-radius: 20px;
+            border-bottom: 2px solid #beaffc;
+            transition: transform 0.3s;
+        }
+        .rectangle1:hover,
+        .rectangle1:focus {
+            transform: translateY(-10px);
+        }
+        .rectangle1 a{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%); 
+            color: #beaffc;
+            text-shadow: 0px 2px 0 black;
+            text-decoration: none; 
+            text-align: center;
+        }
+        .rectangle1:hover a,
+        .rectangle1:focus a,
+        .rectangle1:active a{
+            color:whitesmoke; 
+        }
+
+        .footer {
+            grid-column: 1 / span 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+            background-color: black;
+            color:#beaffc;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        /*moving*/
+        .mar2 {
+            position: absolute; 
+            top: 100%; 
+            transition: top 2s ease;
+            z-index: 3; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            width: 100%; 
+            padding: 10px;
+        }
+        .mar2 h4,
+        .mar2 p {
+            margin: 0; 
+            padding: 0; 
+        }
+        .container:hover .mar2 {
+            top: 0;
+        }        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="mar">Dreamy Anime World - 6+</div>
+    </div>
+    <div class="sidebar">
+        <div class="rectangle5" tabindex="1">    
+            <span href="main6_5.html"><img src="img/1_5.png" alt="1_5" width="100" height="200">Мой сосед Тоторо (My Neighbor Totoro)</span>
+        </div>
+        <div class="rectangle6">
+            <div class="Main_header">Мой сосед Тоторо (My Neighbor Totoro)</div>
+            <div>Сюжет аниме вращается вокруг двух сестер, Мэй и Сацуки, которые переезжают в деревню, чтобы быть ближе к своей больной матери. В новом доме они обнаруживают волшебных существ, включая доброго духа леса по имени Тоторо. Тоторо становится их другом и проводником в мир магии и приключений. Он помогает им в трудные времена, включая момент, когда они ищут свою мать. Через встречи с Тоторо и другими лесными духами, девочки учатся ценить природу и силу дружбы. Аниме наполнено трогательными моментами и уроками о важности семьи, любви и заботы о природе.</div>
+        </div>
+        
+    </div>
+    <div class="sidebar2">
+        <div class="rectangle1" tabindex="5">
+            <a href="main6.html">Назад</a>
+        </div>        
+    </div>
+    <div class="footer">
+        <div class="mar2">
+            <h4>Created by Dizarizago</h4>
+            <p>&copy; All rights reserved Dizarizago/mizioooz 2023-2024</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Anime World</title>
+    <link rel="icon" href="img/logotip2.ico" type="images/x-icon">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .header {
+            padding: 0; 
+            margin: 0; 
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FEFCFF;
+            height: 100%; 
+            position: relative;
+            z-index: 2;
+            overflow: hidden; 
+            /*img*/
+            background-image: url('img/image2.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            position: relative; 
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); 
+            z-index: 1;
+        }
+        .marquee {
+            position: relative;
+            top: -100%; 
+            transition: top 2.5s ease;
+            z-index: 3; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            width: 100%; 
+        }
+
+        .header:hover .marquee {
+            top: 0%; 
+        }
+
+        span {
+            font-family: 'Arial', sans-serif;
+            font-size: 120px;
+            color: #FEFCFF;
+            text-shadow: 4px 4px #beaffc;
+            -webkit-text-stroke: 1px black;
+        }
+        
+        .rectangle3 {
+            width: 150px;
+            height: 80px;         
+            background-color: #6752bd;        
+            transition: background-color 0.3s;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2%;
+        }
+        .rectangle3:hover {
+            background-color: #8470d3; 
+        }
+        .rectangle3 a{
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color:#FEFCFF;
+            font-size: 30px;
+            text-shadow: 2px 2px #beaffc;
+            -webkit-text-stroke: 1px black;
+            text-decoration: none;
+        }
+        .rectangle3 a:hover,
+        .rectangle3 a:active,
+        .rectangle3 a:visited {
+            color:#FEFCFF;
+        }
+        .mar2 h4,
+        .mar2 p {
+            margin: 0; 
+            padding: 0; 
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="marquee">
+            <span>Dreamy Anime World</span>
+            <div class="mar2">
+                <h4>Created by Dizarizago</h4>
+                <p>&copy; All rights reserved Dizarizago/mizioooz 2023-2024</p>
+            </div>
+            <div class="rectangle3">
+                <a href="page2.html">Let's go!</a>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
